@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: nrue-config
+data:
+  nr-ue.conf: |
+{{ .Files.Get "nrue.uicc.conf" | indent 4}}

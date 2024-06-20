@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: cu-config
+data:
+  gnb.conf: |
+{{ .Files.Get "gnb-cu.sa.band78.106prb.conf" | indent 4}}

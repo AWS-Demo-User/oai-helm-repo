@@ -1,0 +1,4 @@
+This is a Helm chart for deploying a sample vRAN workload (i.e. OAI)
+After installation, you can verify the end-to-end connectivity via following commands:
+nrue_pod_name=$(kubectl get pods --no-headers -o custom-columns=":metadata.name" | grep oai-nr-ue)
+kubectl exec -it "$nrue_pod_name" -- ping -I oaitun_ue1 -s 60000 12.1.1.1

@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: du-config
+data:
+  gnb.conf: |
+{{ .Files.Get "gnb-du.sa.band78.106prb.rfsim.conf" | indent 4}}

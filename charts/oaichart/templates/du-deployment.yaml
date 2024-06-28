@@ -52,6 +52,18 @@ spec:
           name: du-config
       - name: rfsim-volume
         emptyDir: {}
+      affinity:
+        podAntiAffinity:
+          preferredDuringSchedulingIgnoredDuringExecution:
+          - weight: 100
+            podAffinityTerm:
+              labelSelector:
+                matchExpressions:
+                - key: app
+                  operator: In
+                  values:
+                  - oai-cu
+              topologyKey: "kubernetes.io/hostname"
 ---
 apiVersion: v1
 kind: Service

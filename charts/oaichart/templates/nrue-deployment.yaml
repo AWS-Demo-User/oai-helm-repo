@@ -41,3 +41,15 @@ spec:
           name: nrue-config
       - name: rfsim-config
         emptyDir: {}
+      affinity:
+        podAffinity:
+          preferredDuringSchedulingIgnoredDuringExecution:
+          - weight: 100
+            podAffinityTerm:
+              labelSelector:
+                matchExpressions:
+                - key: app
+                  operator: In
+                  values:
+                  - oai-du
+              topologyKey: "kubernetes.io/hostname"

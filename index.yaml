@@ -2,8 +2,18 @@ apiVersion: v1
 entries:
   oaichart:
   - apiVersion: v2
+    appVersion: 0.2.0
+    created: "2024-06-28T04:24:40.037158249Z"
+    description: A Helm chart for Kubernetes
+    digest: d845527596593548143bc5d7ea669d66485c9b033e558c89bcb272180237a33f
+    name: oaichart
+    type: application
+    urls:
+    - https://aws-demo-user.github.io/oai-helm-repo/oaichart-0.2.0.tgz
+    version: 0.2.0
+  - apiVersion: v2
     appVersion: 1.16.0
-    created: "2024-06-20T03:10:53.704782025Z"
+    created: "2024-06-28T04:24:40.036498961Z"
     description: A Helm chart for Kubernetes
     digest: 870ddf34da445d031a743db3a4e4faddbd29356c88c200da1f02d7b6c20974d4
     name: oaichart
@@ -11,4 +21,4 @@ entries:
     urls:
     - https://aws-demo-user.github.io/oai-helm-repo/oaichart-0.1.0.tgz
     version: 0.1.0
-generated: "2024-06-20T03:10:53.703953329Z"
+generated: "2024-06-28T04:24:40.035656536Z"
